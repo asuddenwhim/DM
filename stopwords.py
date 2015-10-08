@@ -5,4 +5,11 @@ text = "Generally, data mining (sometimes called data or knowledge discovery) is
 stop_words = set(stopwords.words("english"))
 
 words = word_tokenize(text)
-print(words)
+
+filtered_sentence = []
+
+for w in words:
+	if w not in stop_words:
+		filtered_sentence.append((w))
+
+print filtered_sentence
